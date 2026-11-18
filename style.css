@@ -1,0 +1,356 @@
+/* GLOBAL STYLES */
+
+html { box-sizing:border-box; }
+*,*:before, *:after { box-sizing: inherit; }
+
+header {background-color: #873A47; 
+  padding: 24px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+
+body { font-family:"Space Grotesk",sans-serif;
+  color: #53444B; 
+  background-color: #FFF4E2;
+  }
+
+#hero { overflow: hidden; }
+
+
+/* BACKGROUNDS */
+.background-gold-faint {background-color: #FFF4E2 }
+.background-gold { background-color: #D2A751 }
+.background-maroon-light { background-color: #873A47 }
+.background-maroon-dark { background-color: #4A0E30 }
+
+
+
+/* IMAGES */
+.rise-logo-img { width:168px; }
+
+.hero-img { /*index.html*/
+  position: relative;
+  background-image: url(images/rise-coffee-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  height: 600px;
+}
+.about-us-hero-img { 
+  position: relative;
+  background-image: url(images/rise-coffee-2.jpg);
+  background-size: cover;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-position: 100% 67%;
+  height: 580px;
+}
+
+
+.card-img-wrap { 
+  width:100%;
+  aspect-ratio: 4/5; 
+  border-radius: 200px 200px 0px 0px;
+  overflow: hidden; /* overflow property hides anything outside of the container */
+}
+.card-img-wrap-lg {  /*seen in about us page*/
+  width:100%;
+  aspect-ratio: 5/6; 
+  border-radius: 350px 350px 0px 0px;
+  overflow: hidden;
+}
+
+
+
+.card-img { /*shows middle of image*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-img { /*used only in about page, shows bottom half of the images*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+
+
+/*IMAGES - DECORATIVE STUFF*/
+.hero-icon { /*index decorative explosion*/
+  position: absolute;
+  width: 20%;
+  top: -25%;
+  right: -9%;
+  transform: rotate(-192deg);
+}
+
+.testimonial-icon{ /*decorative circle at the start of the section*/
+  width: 100px
+}
+
+.about-us-hero-icon { /*about us hero decorative explosion*/
+  position: absolute;
+  width: 30%;
+  bottom: -25%;
+  left: -7%;
+  transform: rotate(-192deg);
+}
+
+.gradient-1{/*index.html > fav cup section*/
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.gradient-2{ /*about.html > our story section*/
+  width: 100%;
+  position: absolute;
+  top: -15%;
+  right: 40%;
+  z-index: 1;
+}
+
+
+
+/* LAYOUT UTILITIES */
+.z-index-2{
+  position: relative;
+  z-index: 2;
+}
+
+.position-relative{
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+/* FONTS */
+.text-white { color: white; }
+
+h1 {
+  font-size: 78px; 
+  line-height: 100%; 
+  font-weight: 700; 
+  letter-spacing: -2px; 
+  color: #873A47;
+}
+
+h2 {
+  font-size: 56px; 
+  line-height: 120%; 
+  font-weight: 700; 
+  letter-spacing: -1px; 
+  color: #873A47;
+}
+
+h3 {
+  font-size: 32px; 
+  line-height: 120%; 
+  font-weight: 700; 
+  letter-spacing: -1px; 
+  color: #873A47;
+}
+
+p {
+  font-size: 16px; 
+  line-height: 140%; 
+  font-weight: 400; 
+  font-style: regular; 
+  color: #53444B;
+}
+
+.paragraph-large {
+  font-size: 40px; 
+  line-height: 120%; 
+  font-weight: 700; 
+  letter-spacing: -1px; 
+  color: #873A47;
+}
+
+
+
+/* HAMBURGER */
+.hamburger{
+  display: none;
+  width: 32px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-bar{
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+
+
+/* NAVIGATION */
+nav li { list-style:none; padding-left:0; } /* targetting the list items in the nav */
+nav ul { display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.nav-link { color: #ffffff; text-decoration:none; font-weight: bold;}
+
+.remove-list-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*TESTIMONIAL FONTS*/
+
+.review-statements { 
+  font-family:"Space Mono",sans-serif;
+  font-style: italic; 
+  font-size: 32px;
+  line-height: 120%; 
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.reviewer-names { 
+  font-family:"Space Mono",sans-serif;
+  font-style: regular; 
+  font-size: 16px;
+  line-height: 120%; 
+  font-weight: 700;
+  letter-spacing: 14%;
+}
+
+
+
+/* BUTTONS */
+.button { /*gold button*/
+  display: inline-block;
+  color: white;
+  padding: 10px 18px;
+  background-color: #D2A751;
+  text-decoration: none;
+  font-weight: bold;
+}
+.button:hover { background-color: #E6C27A; }
+
+
+.button-secondary { /*red button*/
+  display: inline-block;
+  color: white;
+  padding: 10px 18px;
+  background-color: #873A47;
+  text-decoration: none;
+  font-weight: bold;
+}
+.button-secondary:hover { background-color: #4A0E30; }
+
+
+
+/* GENERAL */
+.card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.card-border{
+  border-top: solid 4px #D2A751;
+  border-bottom: solid 4px #D2A751;
+  margin: 24px 0;
+  flex-grow: 1;
+}
+
+.card-border-bottom{ /* about page, our values */
+  border-bottom: solid 4px #D2A751;
+  margin: 24px 0;
+  flex-grow: 1;
+}
+
+
+.footer-tos-box{ /* copyright, privacy, terms */
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-contact-box{ /* get in touch */
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+main li, footer li{ /* pads the weekdays and operations hours */
+  padding: 4px 0px;
+}
+
+/* FORM */
+.contact-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.input-text, .input-message {
+  width: 100%;
+}
+
+.field-wide{
+  grid-column: 1 / 3;
+}
+
+.form-submit{
+  grid-column: 1 / 3;
+  justify-self: start;
+  border: none;
+}
+
+
+
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .card{ padding: 24px; }
+  h1 { font-size: 56px; }
+  h2 { font-size: 40px; }
+  h3 { font-size: 26px; }
+  .paragraph-large { font-size: 30px; }
+  .section-padding { padding: 56px 0; }
+  
+  nav { display: none; }
+  .nav-link { display: none; }
+  .hamburger { display: flex; }
+}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 24px; }
+  .paragraph-large { font-size: 24px; }
+  .section-padding { padding: 40px 0; }
+  
+  header { padding: 16px 6%; }
+  .logo {display: 104px; }
+  nav { display: none; }
+  .nav-link { display: none; }
+  .hamburger{ display: flex; }
+
+  .contact-form{ grid-template-columns: 1fr; }
+  .field-wide { grid-column: 1/2; }
+  .form-submit { grid-column: 1/2; }
+}
